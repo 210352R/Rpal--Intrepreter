@@ -1,0 +1,4 @@
+let sum N = 
+	 N+10
+in 
+Print(sum 10)

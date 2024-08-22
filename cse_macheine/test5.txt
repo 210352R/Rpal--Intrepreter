@@ -1,0 +1,21 @@
+let mod = fn (x,y). 
+	x - (x/y) * y
+in
+let m = 1
+in
+let rec len = fn (n,m). 
+	(n/10) eq 0 -> m 
+	| len (n/10, m+1)
+in
+let rec reverse = fn (n,m).
+	(n / 10) eq 0 -> n | (mod(n,10)*(10**(m-1))) + reverse(n/10,m-1)
+in
+let rec pali = fn (d).
+	d eq reverse(d,len(d,m)) -> true | false
+in
+let rec palist = fn (n,m,A).
+	n gr m -> A | 
+	pali(n) -> palist(n+1,m,A aug n) |
+	palist (n+1,m,A)
+in 
+Print(palist(200,500,nil))

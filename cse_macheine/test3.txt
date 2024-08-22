@@ -1,0 +1,12 @@
+let A = nil and B = nil and x=1
+in
+let rec reverse (T,x) =
+    x le Order(T) -> (reverse(T,(x+1)) aug (T x)) | B
+in
+let rec fib (a,b,c,d) =
+    c le b -> (c ge a -> (fib(a,b,d,(c+d)) aug c) | fib(a,b,d,(c+d))) | A
+in
+let Get_Fibonacci_Series(a,b) =
+    print(reverse(fib(a,b,0,1),1))
+in
+Get_Fibonacci_Series(0,100)
